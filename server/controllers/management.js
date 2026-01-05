@@ -1,5 +1,6 @@
 import User from "../models/user.js";
 import Transaction from "../models/Transaction.js";
+import mongoose from "mongoose";
 
 export const getAdmins = async (req, res) => {
     try {
@@ -16,7 +17,7 @@ export const getUserPerformance = async (req, res) => {
         const { id } = req.params;
         
         const userWithStats = await User.aggregate([
-            { $match: { _id: id } },
+            { $match: { _id: new mongoose.mongo.ObjectId(id) } },
             {
                 $lookup: {
                     from: "affiliatestats",

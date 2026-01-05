@@ -31,13 +31,30 @@ const Navbar = ({user, isSidebarOpen, setIsSidebarOpen}) => {
                 <IconButton onClick={()=> setIsSidebarOpen(!isSidebarOpen)}>
                     <MenuIcon/>
                 </IconButton>
-                <FlexBetween backgroundColor={theme.palette.background.alt}
-                borderRadius="9px" gap="3rem" p="0.1rem 1.5rem">
+                {/* <FlexBetween backgroundColor={theme.palette.background.alt}
+                borderRadius="9px" gap="0.5rem" p="0.1rem 1rem"
+                >
                     <InputBase placeholder='Search...'/>
                     <IconButton>
-                        <Search/>
+                        <Search />
                     </IconButton>
-                </FlexBetween>
+                </FlexBetween> */}
+                <Box
+                    display="flex"
+                    alignItems="center"
+                    backgroundColor={theme.palette.background.alt}
+                    borderRadius="9px"
+                    px="1rem"
+                    sx={{ width: { xs: "100px", sm: "250px" } }}
+                    >
+                    <InputBase
+                        placeholder="Search..."
+                        sx={{ flex: 1 }}
+                    />
+                    <IconButton size="small">
+                        <Search />
+                    </IconButton>
+                </Box>
             </FlexBetween>
 
             {/* RIGHT SIDE */}
@@ -55,8 +72,8 @@ const Navbar = ({user, isSidebarOpen, setIsSidebarOpen}) => {
 
                 <FlexBetween>
                     <Button onClick={handleClick} sx={{ display: "flex", 
-                        justifyContent: "space-between", alignItems: "center", 
-                        textTransform: "none", gap: "1rem"}}>
+                        justifyContent: "space-between", alignItems: "center",
+                        gap: "1px", textTransform: "none" }}>
                             <Box component="img" alt="profile" src={pImage} height="32px" width="32px" 
                                 borderRadius="50%" sx={{objectFit: "cover"}}/>
 

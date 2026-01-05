@@ -9,7 +9,7 @@ const Performance = () => {
     const theme = useTheme()
     const userId = useSelector((state) => state.global.userId)
     const {data, isLoading} = useGetUserPerformanceQuery(userId)
-    console.log("data:", data)
+    console.log("performance data:", data)
 
     const colums = [
         {
@@ -77,7 +77,7 @@ const Performance = () => {
       rows={(data && data.sales) || []}
       columns={colums}
     //   components={{
-    //     columMenu: CustomColumnMenu
+    //     columMenu: CustomColumnMenu,
     //   }}
     />
     </Box>
