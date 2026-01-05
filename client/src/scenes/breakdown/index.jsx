@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import Header from '../../components/Header'
-import Breakdownchart from '../../components/Breakdownchart'
+import Breakdownchart from '../../components/BreakdownChart'
 
 const Breakdown = () => {
   return (
