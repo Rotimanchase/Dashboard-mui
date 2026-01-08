@@ -18045,7 +18045,7 @@ export const dataAffiliateStat = [
       email: "swelbeck12@ycombinator.com",
       password: "RSjzmAjnq",
       city: "Sangoleng",
-      state: null,
+      state: null, 
       country: "ID",
       occupation: "Pharmacist",
       phoneNumber: "7036619983",

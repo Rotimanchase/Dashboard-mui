@@ -4,7 +4,7 @@ import { LightModeOutlined, DarkModeOutlined, Menu as MenuIcon, Search,
 import FlexBetween from './FlexBetween'
 import { useDispatch } from 'react-redux'
 import { setMode } from '../state/index.js'
-import pImage from '../assets/l2.jpeg'
+import pImage from '../assets/IMG_3720.JPG'
 import { AppBar, Box, Button, IconButton, InputBase, Menu, MenuItem, Toolbar, Typography, useTheme,  } from '@mui/material'
 
 const Navbar = ({user, isSidebarOpen, setIsSidebarOpen}) => {
