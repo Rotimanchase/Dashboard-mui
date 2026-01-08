@@ -41,24 +41,25 @@ app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
 // MONGOOSE SETUP
-if (!mongoose.connection.readyState) {
-    mongoose.connect(process.env.MONGO_URL)
-      .then(() => console.log("MongoDB connected"))
-      .catch(err => console.error(err));
-  }
+// if (!mongoose.connection.readyState) {
+//     mongoose.connect(process.env.MONGO_URL)
+//       .then(() => console.log("MongoDB connected"))
+//       .catch(err => console.error(err));
+//   }
   
-export default app;
-// const PORT = process.env.PORT || 9000;
-// mongoose.connect(process.env.MONGO_URL)
-// .then(() => {
-//     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+// export default app;
 
-//     // only add data once
-//     // AffiliateStat.insertMany(dataAffiliateStat)
-//     // User.insertMany(dataUser)
-//     // Product.insertMany(dataProduct)
-//     // ProductStat.insertMany(dataProductStat)
-//     // Transaction.insertMany(dataTransaction)
-//     // OverallStat.insertMany(dataOverallStat)
-// })
-// .catch((error) => console.log(`${error} did not connect`));
+const PORT = process.env.PORT || 9000;
+mongoose.connect(process.env.MONGO_URL)
+.then(() => {
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+
+    // only add data once
+    // AffiliateStat.insertMany(dataAffiliateStat)
+    // User.insertMany(dataUser)
+    // Product.insertMany(dataProduct)
+    // ProductStat.insertMany(dataProductStat)
+    // Transaction.insertMany(dataTransaction)
+    // OverallStat.insertMany(dataOverallStat)
+})
+.catch((error) => console.log(`${error} did not connect`));
